@@ -1,4 +1,8 @@
+#On raspberry pi use this:
 FROM armhf/alpine:latest
+
+#On pc use this:
+#FROM alpine:latest
 
 MAINTAINER windcao<windcao@hotmail.com>
 
@@ -19,6 +23,7 @@ RUN apk add --update \
     openssl-dev \
     libffi-dev \
     libgcc \
+  && pip install --upgrade pip \
   && pip install incremental \
   && pip install scrapy \
   && rm -rf /var/cache/apk/*
