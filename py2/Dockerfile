@@ -11,7 +11,7 @@ ENV TZ "Asia/Beijing"
 LABEL Description="scrapy  work enveriment base on alpine" Version="1.0"
 
 #I use this to upspeed in China
-#RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/latest-stable/main" > /etc/apk/repositories
+RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/latest-stable/main" > /etc/apk/repositories
 
 
 RUN apk add --update \
